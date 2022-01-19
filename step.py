@@ -15,7 +15,7 @@ class S3DownloadLogger(object):
         percentage = round((self._seen_so_far / self._size) * 100)
         if percentage in self._seen_percentages.keys() and not self._seen_percentages[percentage]:
             self._seen_percentages[percentage] = True
-            logging.info(f"Download progress for '{self._filename}': {percentage}% at '{datetime.utcnow()}UTC")
+            logging.info(f"Download progress at '{datetime.utcnow()}UTC: {percentage}%")
 
 def initialize_resource(client_id, secret, region):
     s3_resource = boto3.resource('s3',
