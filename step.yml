@@ -1,0 +1,62 @@
+title: Download S3 Bucket
+summary: Download S3 Bucket
+description: |-
+  Downloads the contents of a secure s3 bucket
+website: https://github.com/WhoopInc/bitrise-step-download-s3-bucket
+source_code_url: https://github.com/WhoopInc/bitrise-step-download-s3-bucket
+support_url: https://github.com/WhoopInc/bitrise-step-download-s3-bucket/issues
+
+project_type_tags:
+  - ios
+  - android
+
+type_tags:
+  - utility
+
+is_requires_admin_user: false
+is_always_run: false
+is_skippable: false
+
+inputs:
+  - client_id: $AWS_ACCESS_KEY
+    opts:
+      title: S3 Client ID
+      summary: S3 Client ID
+      description: S3 Client ID
+      is_required: true
+      is_sensitive: true
+  - secret: $AWS_SECRET_KEY
+    opts:
+      title: S3 Secret
+      summary: S3 Secret
+      description: S3 Secret
+      is_required: true
+      is_sensitive: true
+  - bucket: $S3_BUCKET
+    opts:
+      title: S3 Bucket
+      summary: S3 Bucket
+      description: S3 Bucket
+      is_required: true
+      is_sensitive: false
+  - region: $AWS_REGION
+    opts:
+      title: S3 Region
+      summary: S3 Region
+      description: S3 Region
+      is_required: true
+      is_sensitive: false
+  - object:
+    opts:
+      title: S3 Object
+      summary: S3 Object to download
+      description: S3 Object to download
+      is_required: true
+      is_sensitive: false
+  - filename:
+    opts:
+      title: S3 Filename
+      summary: S3 Filename to save as
+      description: S3 Filename to save as
+      is_required: true
+      is_sensitive: false
