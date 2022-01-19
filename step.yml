@@ -56,7 +56,7 @@ inputs:
   - filename:
     opts:
       title: S3 Filename
-      summary: S3 Filename to save as
-      description: S3 Filename to save as
+      summary: Filename to save the downloaded object as
+      description: Filename to save the downloaded object as
       is_required: true
       is_sensitive: false
