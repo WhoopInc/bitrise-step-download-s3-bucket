@@ -2,6 +2,7 @@ import boto3
 from datetime import datetime
 import logging
 import os
+import sys
 
 class S3DownloadLogger(object):
     def __init__(self, file_size, filename):
